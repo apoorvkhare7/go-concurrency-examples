@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-// function to add an array of numbers.
 func sum(a int, b int, c chan int) {
 	sum := 0
 	for i:=a; i<=b;i++ {
 		sum += i
 	}
 	// writes the sum to the go routines.
-	c <- sum // send sum to c
+	c <- sum 
 }
 
 func main() {
